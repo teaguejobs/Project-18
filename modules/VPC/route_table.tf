@@ -1,4 +1,4 @@
-#-------------root/route_table.tf---------------------
+#-------------VPC/route_table.tf---------------------
 # create private route table
 resource "aws_route_table" "private-rtb" {
   vpc_id = aws_vpc.main.id
@@ -6,7 +6,7 @@ resource "aws_route_table" "private-rtb" {
   tags = merge(
     var.tags,
     {
-      Name = format("%s-Private-Route-Table", var.name)
+      Name = format("%s-Private-Route-Table-%s", var.name, var.environment)
     },
   )
 }
@@ -35,7 +35,7 @@ resource "aws_route_table" "public-rtb" {
   tags = merge(
     var.tags,
     {
-      Name = format("%s-Public-Route-Table", var.name)
+      Name = format("%s-Public-Route-Table-%s", var.name, var.environment)
     },
   )
 }
