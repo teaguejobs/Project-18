@@ -5,9 +5,7 @@
 resource "aws_lb" "ext-alb" {
   name     = var.name
   internal = false
-  security_groups = [
-    aws_security_group.ext-alb-sg.id,
-  ]
+  security_groups = [var.public-sg]
 
   subnets = [
     var.public-sbn-1,

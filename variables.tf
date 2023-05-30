@@ -67,3 +67,8 @@ variable "master-password" {
   type        = string
   description = "RDS master password"
 }
+
+variable "environment" {
+  type        = string
+  description = "Enviroment"
+}

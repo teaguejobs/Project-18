@@ -15,6 +15,8 @@ preferred_number_of_public_subnets = 2
 
 preferred_number_of_private_subnets = 4
 
+environment = "dev"
+
 ami = "ami-0261755bbcb8c4a84"
 
 keypair = "PBL"
@@ -27,7 +29,6 @@ master-username = "teague"
 
 
 tags = {
-  Enviroment      = "production"
   Owner-Email     = "hacksoftteam2012@gmail.com"
   Managed-By      = "Terraform"
   Billing-Account = "633880500398"
