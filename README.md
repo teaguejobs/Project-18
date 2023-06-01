@@ -46,5 +46,5 @@ a. Import module as a source and have access to its variables via var keyword:
 2. In order to make your configuration files more readable and follow canonical format and style – use terraform fmt command. It will apply Terraform language style conventions and format your .tf files in accordance to them.
 
 3. In order not to delete our S3 buckets when we destroy our infrastructure , We need to add # to our backend.tf file run
-`terraform init -migrate-state
+`terraform init -migrate-state`
 Before we Destroy our infrastructure.
